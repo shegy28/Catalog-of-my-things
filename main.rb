@@ -1,2 +1,3 @@
-class main
+class Main
+  puts 'Welcome to'
 end
