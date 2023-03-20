@@ -27,7 +27,7 @@ After you're finished please remove all the comments and instructions!
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[Catalog-of-things\] ](#-Catalog-of-things-)
+- [📖 \[Catalog-of-my-things\] ](#-Catalog-of-my-things-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -44,7 +44,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Catalog-of-things] <a name="about-project"></a>
+# 📖 [Catalog-of-my-things] <a name="about-project"></a>
 Catalog of my things is a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games.
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -97,7 +97,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd your-folder
-  git@github.com:shegy28/Catalog-of-things.git
+  git@github.com:shegy28/Catalog-of-my-things.git
 ```
 
 ### Install
@@ -156,7 +156,7 @@ Install this project with:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/shegy28/Catalog-of-things/issues).
+Feel free to check the [issues page](https://github.com/shegy28/Catalog-of-my-things/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
