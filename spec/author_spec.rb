@@ -1,7 +1,5 @@
 require 'spec_helper'
 
-
-
 RSpec.describe Author do
   describe '#initialize' do
     it 'creates a new Author instance with the given first and last name' do
