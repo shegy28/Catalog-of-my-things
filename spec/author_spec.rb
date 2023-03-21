@@ -1,4 +1,5 @@
-require 'spec_helper'
+require_relative '../Ruby_classes/author'
+
 
 RSpec.describe Author do
   describe '#initialize' do
