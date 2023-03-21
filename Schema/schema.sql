@@ -13,7 +13,6 @@ CREATE DATABASE catalog;
 --     PRIMARY KEY(id)
 -- );
 
-
 CREATE TABLE labels (
     id  INT GENERATED ALWAYS AS IDENTITY,
     title VARCHAR(100),
@@ -27,7 +26,7 @@ CREATE TABLE item (
     author_id INT,
     label_id INT,
     publish_date DATE,
-    archived BOOLEAN,
+    archived BOOLEAN DEFAULT false,
     PRIMARY KEY(id),
     FOREIGN KEY (genre_id) REFERENCES genres (id),
     FOREIGN KEY (author_id) REFERENCES authors (id),
@@ -39,6 +38,7 @@ CREATE TABLE books (
     title VARCHAR(100),
     publisher VARCHAR(100),
     cover_state VARCHAR(100),
+    PRIMARY KEY(id),
     FOREIGN KEY(id) REFERENCES item(id)
 );
 
@@ -46,13 +46,14 @@ CREATE TABLE books (
 --     id  INT,
 --     name VARCHAR(100),
 --     on_spotify BOOLEAN,
+--     PRIMARY KEY(id),
 --     FOREIGN KEY(id) REFERENCES item(id)
 -- );
-
 
 -- CREATE TABLE games (
 --     id  INT,
 --     multiplayer BOOLEAN,
 --     last_played_at DATE,
+--     PRIMARY KEY(id),
 --     FOREIGN KEY(id) REFERENCES item(id)
 -- );
