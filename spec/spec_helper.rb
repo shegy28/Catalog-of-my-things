@@ -4,3 +4,4 @@ require_relative '../Ruby_classes/game'
 
 require 'yaml'
 require 'date'
+require 'rspec'
