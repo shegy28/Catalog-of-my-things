@@ -1,4 +1,5 @@
 require 'date'
+
 class Item
   attr_accessor :id, :author, :genre, :source, :publish_date
 
@@ -22,5 +23,10 @@ class Item
 
   def move_to_archive
     @archived = true if can_be_archived?
+  end
+
+  def add_author=(author)
+    @author = author
+    author.items.push(self) unless author.items.include?(self)
   end
 end
