@@ -16,6 +16,11 @@ class Item
     publish_year > 10
   end
 
+  def genre=(genre)
+    @genre = genre
+    @genre.add_item(self) unless @genre.items.include?(self)
+  end
+
   def move_to_archive
     @archived = true if can_be_archived?
   end
