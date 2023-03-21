@@ -1,4 +1,4 @@
-require_relative '../Ruby_classes/items'
+require 'spec_helper'
 
 describe Item do
   describe '#initialize' do
