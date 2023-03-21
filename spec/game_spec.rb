@@ -1,4 +1,4 @@
-require_relative '../Ruby_classes/game'
+require 'spec_helper'
 
 describe Game do
   describe '#initialize' do

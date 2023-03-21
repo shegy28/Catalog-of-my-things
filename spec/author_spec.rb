@@ -1,7 +1,6 @@
-require_relative '../Ruby_classes/author'
+require 'spec_helper'
 
-
-RSpec.describe Author do
+describe Author do
   describe '#initialize' do
     it 'creates a new Author instance with the given first and last name' do
       author = Author.new('John', 'Doe')
