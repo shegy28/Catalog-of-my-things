@@ -3,7 +3,7 @@ require 'json'
 
 module MusicAlbumDataController
   def retrieve_albums
-    if File.exist?('./json_data_files/album.json') && File.read('./json_data_files/album.json') != ''
+    if File.exist?('./json_data_files/album.json') && !File.empty?('./json_data_files/album.json')
       JSON.parse(File.read('./json_data_files/album.json')).map do |album|
         MusicAlbum.new(album['name'], album['publish_date'], album['spotify'])
       end

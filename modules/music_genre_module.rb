@@ -1,9 +1,9 @@
 require_relative '../Ruby_Classes/music_genre'
-require'json'
+require 'json'
 
 module MusicGenresDataController
   def retrieve_genres
-    if File.exist?('./json_data_files/genres.json') && File.read('./json_data_files/genres.json') != ''
+    if File.exist?('./json_data_files/genres.json') && !File.empty?('./json_data_files/genres.json')
       JSON.parse(File.read('./json_data_files/genres.json')).map do |genre|
         Genre.new(name: genre['name'])
       end
