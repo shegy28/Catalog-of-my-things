@@ -1,9 +1,18 @@
 require_relative './author'
 require_relative './game'
 require_relative './item'
+require_relative './music_album'
+require_relative './music_genre'
+require_relative '../modules/music_album_module'
+require_relative '../modules/music_genre_module'
 
 class App
+  include MusicAlbumDataController
+  include MusicGenresDataController
+
   def initialize
+    @genres = retrieve_genres
+    @music_albums = retrieve_albums
     @author = []
     @game = []
   end
@@ -39,4 +48,56 @@ class App
     @game << game
     puts 'Game created successfully'
   end
+
+  def list_all_music_album
+    puts 'Music Albums'
+    if @music_album.empty?
+      puts 'No Music Album Created!'
+    else
+    @music_albums.each do |music_album|
+      puts "Name: #{music_album.name}, Publish Date: #{music_album.publish_date}, On Spotify: #{music_album.on_spotify}"
+    end
+  end
+
+    def list_all_genres
+    if @genre.empty?
+      puts 'No Genre for any Music Album Created!'
+    else
+    puts 'Genres'
+    @genres.each do |genre|
+      puts "Name: #{genre.name}"
+    end
+  end
+
+   def add_music_album
+    print 'Please, type the album name: '
+    name = gets.chomp
+
+    print 'Date of publish [Enter date in format (yyyy-mm-dd)]: '
+    publish_date = get_date_from_user(gets.chomp)
+    return unless publish_date
+
+    print 'Has present in spotify? [Y/N]: '
+    on_spotify = gets.chomp.downcase == 'y' || false
+
+    @music_albums << MusicAlbum.new(name, publish_date, on_spotify)
+    puts 'Album created successfully'
+  end
+
+    def get_date_from_user(data)
+    Date.parse(data)
+  rescue ArgumentError
+    puts 'Wrong date format'
+    false
+  end
+
+  def save_data
+    # save_books
+    # save_labels
+    # add_author
+    # save_game
+    save_albums
+    save_genres
+  end
+
 end
