@@ -5,16 +5,20 @@ require_relative './music_album'
 require_relative './music_genre'
 require_relative '../modules/music_album_module'
 require_relative '../modules/music_genre_module'
+require_relative '../modules/game_module'
+require_relative '../modules/author_module'
 
 class App
   include MusicAlbumDataController
   include MusicGenresDataController
+  include GameDataController
+  include AuthorDataController
 
   def initialize
     @genres = retrieve_genres
     @music_albums = retrieve_albums
-    @author = []
-    @game = []
+    @author = retrieve_authors
+    @game = retrieve_games
   end
 
   def list_all_games
@@ -32,12 +36,18 @@ class App
       puts 'No authors found'
     else
       @author.each do |author|
-        puts "First Name: #{author.first_name} Last Name: #{author.last_name}"
+        puts "Full Name: #{author.first_name} #{author.last_name}"
       end
     end
   end
 
   def add_game
+    print "Author's First name: "
+    first_name = gets.chomp
+    print "Author's Last name: "
+    last_name = gets.chomp
+    author = Author.new(first_name, last_name)
+    @author << author
     print 'Publication Date:  '
     publish_date = gets.chomp
     print 'multiplayer status true or false:  '
@@ -45,6 +55,7 @@ class App
     print 'Last played date:  '
     last_played_at = gets.chomp
     game = Game.new(publish_date, multiplayer, last_played_at)
+    game.add_author = author
     @game << game
     puts 'Game created successfully'
   end
@@ -88,8 +99,8 @@ class App
   def save_data
     # save_books
     # save_labels
-    # add_author
-    # save_game
+    save_authors
+    save_games
     save_albums
     save_genres
   end
