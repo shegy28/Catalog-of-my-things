@@ -34,11 +34,11 @@ class Menu
       when 1
         '.@app'
       when 2
-        '..@app'
+        @app.list_all_music_album
       when 3
         @app.list_all_games
       when 4
-        '/..@app'
+        @app.list_all_genres
       when 5
         '....@app'
       when 6
@@ -46,10 +46,11 @@ class Menu
       when 7
         '.../.@app'
       when 8
-        '//,,@app'
+        @app.add_music_album
       when 9
         @app.add_game
       when 10
+        @app.save_data
         puts 'Thank you for using this app!'
         exit
       else
