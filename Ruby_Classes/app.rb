@@ -51,25 +51,15 @@ class App
 
   def list_all_music_album
     puts 'Music Albums'
-    if @music_album.empty?
-      puts 'No Music Album Created!'
-    else
-      @music_albums.each do |music_album|
-        puts "Name: #{music_album.name},"
-        puts "Publish Date: #{music_album.publish_date},"
-        puts "On Spotify: #{music_album.on_spotify}"
-      end
+    @music_albums.each do |music_album|
+      puts "Name: #{music_album.name}, Publish Date: #{music_album.publish_date}, On Spotify: #{music_album.on_spotify}"
     end
   end
 
   def list_all_genres
-    if @genre.empty?
-      puts 'No Genre for any Music Album Created!'
-    else
-      puts 'Genres'
-      @genres.each do |genre|
-        puts "Name: #{genre.name}"
-      end
+    puts 'Genres'
+    @genres.each do |genre|
+      puts "Name: #{genre.name}"
     end
   end
 
