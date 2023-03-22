@@ -7,11 +7,11 @@ CREATE DATABASE catalog;
 --     PRIMARY KEY(id)
 -- );
 
--- CREATE TABLE genres (
---     id  INT GENERATED ALWAYS AS IDENTITY,
---     name VARCHAR(100),
---     PRIMARY KEY(id)
--- );
+CREATE TABLE genres (
+    id  INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100),
+    PRIMARY KEY(id)
+);
 
 CREATE TABLE labels (
     id  INT GENERATED ALWAYS AS IDENTITY,
@@ -42,13 +42,13 @@ CREATE TABLE books (
     FOREIGN KEY(id) REFERENCES item(id)
 );
 
--- CREATE TABLE music_albums (
---     id  INT,
---     name VARCHAR(100),
---     on_spotify BOOLEAN,
---     PRIMARY KEY(id),
---     FOREIGN KEY(id) REFERENCES item(id)
--- );
+CREATE TABLE music_albums (
+    id  INT,
+    name VARCHAR(100),
+    on_spotify BOOLEAN,
+    PRIMARY KEY(id),
+    FOREIGN KEY(id) REFERENCES item(id)
+);
 
 -- CREATE TABLE games (
 --     id  INT,
