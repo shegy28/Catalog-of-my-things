@@ -54,22 +54,26 @@ class App
     if @music_album.empty?
       puts 'No Music Album Created!'
     else
-    @music_albums.each do |music_album|
-      puts "Name: #{music_album.name}, Publish Date: #{music_album.publish_date}, On Spotify: #{music_album.on_spotify}"
+      @music_albums.each do |music_album|
+        puts "Name: #{music_album.name},"
+        puts "Publish Date: #{music_album.publish_date},"
+        puts "On Spotify: #{music_album.on_spotify}"
+      end
     end
   end
 
-    def list_all_genres
+  def list_all_genres
     if @genre.empty?
       puts 'No Genre for any Music Album Created!'
     else
-    puts 'Genres'
-    @genres.each do |genre|
-      puts "Name: #{genre.name}"
+      puts 'Genres'
+      @genres.each do |genre|
+        puts "Name: #{genre.name}"
+      end
     end
   end
 
-   def add_music_album
+  def add_music_album
     print 'Please, type the album name: '
     name = gets.chomp
 
@@ -84,7 +88,7 @@ class App
     puts 'Album created successfully'
   end
 
-    def get_date_from_user(data)
+  def get_date_from_user(data)
     Date.parse(data)
   rescue ArgumentError
     puts 'Wrong date format'
@@ -99,5 +103,4 @@ class App
     save_albums
     save_genres
   end
-
 end
