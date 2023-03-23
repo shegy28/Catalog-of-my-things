@@ -3,9 +3,9 @@ require 'json'
 
 module MusicGenresDataController
   def retrieve_genres
-    if File.exist?('./json_data_files/genres.json') && !File.empty?('./json_data_files/genres.json')
-      JSON.parse(File.read('./json_data_files/genres.json')).map do |genre|
-        Genre.new(name: genre['name'])
+    if File.exist?('./json_data_files/genre.json') && !File.empty?('./json_data_files/genre.json')
+      JSON.parse(File.read('./json_data_files/genre.json')).map do |genre|
+        Genre.new(genre['name'])
       end
     else
       []
