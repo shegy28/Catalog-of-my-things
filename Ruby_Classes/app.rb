@@ -68,7 +68,6 @@ class App
 
   def list_all_labels
     @labels.each do |label|
-      puts "ID: #{label.id}"
       puts "Title: #{label.title}"
       puts "Color: #{label.color}"
     end
@@ -80,7 +79,6 @@ class App
       return
     end
     @author.each do |author|
-      puts "ID: #{author.id}"
       puts "First name: #{author.first_name}"
       puts "Last name: #{author.last_name}"
       puts "\n"
@@ -92,7 +90,10 @@ class App
       puts 'No games found'
     else
       @game.each do |game|
-        puts "Published date: #{game.publish_date} |  Last Played on:  #{game.last_played_at}"
+        puts "Published date: #{game.publish_date}"
+        puts "Last Played on:  #{game.last_played_at}"
+        puts "Multiplayer stats: #{game.multiplayer}"
+        puts "\n"
       end
     end
   end
