@@ -32,7 +32,7 @@ class Menu
     loop do
       case menu
       when 1
-        '.@app'
+        @app.list_all_books
       when 2
         @app.list_all_music_album
       when 3
@@ -40,11 +40,11 @@ class Menu
       when 4
         @app.list_all_genres
       when 5
-        '....@app'
+        @app.list_all_labels
       when 6
         @app.list_all_authors
       when 7
-        '.../.@app'
+        @app.add_book
       when 8
         @app.add_music_album
       when 9
