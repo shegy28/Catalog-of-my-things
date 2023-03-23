@@ -54,7 +54,7 @@ class Menu
         puts 'Thank you for using this app!'
         exit
       else
-        puts 'Please choose a number between 1 and 7'
+        puts 'Please choose a number between 1 and 10'
       end
     end
   end
