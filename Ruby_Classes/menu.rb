@@ -44,7 +44,7 @@ class Menu
       when 6
         @app.list_all_authors
       when 7
-        # @app.add_book
+        @app.add_book
       when 8
         @app.add_music_album
       when 9
