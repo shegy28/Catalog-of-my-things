@@ -1,13 +1,13 @@
-require './ruby_classes/item'
+require_relative 'item'
 
 class Book < Item
-  attr_accessor :publisher, :cover_state, :title
+  attr_accessor :publisher, :cover_state, :name
 
-  def initialize(title:, publisher:, cover_state:, publish_date:)
-    super(id: nil, publish_date: publish_date)
+  def initialize(name, publisher, cover_state, publish_date)
+    super(publish_date)
+    @name = name
     @publisher = publisher
     @cover_state = cover_state
-    @title = title
   end
 
   private

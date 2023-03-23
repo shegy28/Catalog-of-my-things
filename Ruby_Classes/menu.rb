@@ -32,7 +32,7 @@ class Menu
     loop do
       case menu
       when 1
-        '.@app'
+        @app.list_all_books
       when 2
         @app.list_all_music_album
       when 3
@@ -40,11 +40,11 @@ class Menu
       when 4
         @app.list_all_genres
       when 5
-        '....@app'
+        @app.list_all_labels
       when 6
         @app.list_all_authors
       when 7
-        '.../.@app'
+        @app.add_book
       when 8
         @app.add_music_album
       when 9
@@ -54,7 +54,7 @@ class Menu
         puts 'Thank you for using this app!'
         exit
       else
-        puts 'Please choose a number between 1 and 7'
+        puts 'Please choose a number between 1 and 10'
       end
     end
   end

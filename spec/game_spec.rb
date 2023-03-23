@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Game do
   describe '#initialize' do
@@ -23,7 +23,7 @@ describe Game do
     it 'sets the archive attribute to false' do
       game = Game.new(publish_date, multiplayer, last_played_at)
 
-      expect(game.instance_variable_get(:@archive)).to eq(false)
+      expect(game.instance_variable_get(:@archived)).to eq(false)
     end
   end
 

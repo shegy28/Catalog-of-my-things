@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Item do
   describe '#initialize' do
@@ -14,7 +14,7 @@ describe Item do
     end
 
     it 'sets archive to false by default' do
-      expect(item.archive).to be_falsey
+      expect(item.archived).to be_falsey
     end
   end
 
@@ -40,7 +40,7 @@ describe Item do
     it 'does not set @archived to true if item cannot be archived' do
       item = Item.new('12-12-2023')
       item.move_to_archive
-      expect(item.instance_variable_get(:@archived)).to eq(nil)
+      expect(item.instance_variable_get(:@archived)).to eq(false)
     end
   end
 
