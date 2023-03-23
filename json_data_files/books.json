@@ -16,5 +16,11 @@
     "publisher": "marvel",
     "cover_state": "good",
     "publish_date": "1999-12-12"
+  },
+  {
+    "name": "hound of baskervills",
+    "publisher": "Fox",
+    "cover_state": "good",
+    "publish_date": "1990-10-1"
   }
 ]
