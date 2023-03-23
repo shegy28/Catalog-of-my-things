@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Book do
   let(:publish_date) { '2020-01-01' }
