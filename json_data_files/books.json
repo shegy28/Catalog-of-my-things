@@ -1,0 +1,20 @@
+[
+  {
+    "name": "harry potter",
+    "publisher": "harry",
+    "cover_state": "bad",
+    "publish_date": "2000-12-12"
+  },
+  {
+    "name": "wizard of oz",
+    "publisher": "printing press",
+    "cover_state": "good",
+    "publish_date": "2001-12-12"
+  },
+  {
+    "name": "Titans",
+    "publisher": "marvel",
+    "cover_state": "good",
+    "publish_date": "1999-12-12"
+  }
+]
