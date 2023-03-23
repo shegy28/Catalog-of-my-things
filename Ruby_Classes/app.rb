@@ -50,7 +50,7 @@ class App
   end
 
   def list_all_music_album
-    puts 'Music Albums'
+    puts "Music Albums\n"
     @music_albums.each do |music_album|
       puts "Name: #{music_album.name}, Publish Date: #{music_album.publish_date}, On Spotify: #{music_album.on_spotify}"
     end
@@ -74,8 +74,22 @@ class App
     print 'Has present in spotify? [Y/N]: '
     on_spotify = gets.chomp.downcase == 'y' || false
 
-    @music_albums << MusicAlbum.new(name, publish_date, on_spotify)
+    album = MusicAlbum.new(name, publish_date, on_spotify)
+
+    genre = add_genre
+
+    genre.add_item(album)
     puts 'Album created successfully'
+    @music_albums << album
+  end
+
+  def add_genre
+    print "Add Genre\n\n"
+    print 'Genre name: '
+    genre_name = gets.chomp
+    genre = Genre.new(genre_name)
+    @genres << genre
+    genre
   end
 
   def get_date_from_user(data)
