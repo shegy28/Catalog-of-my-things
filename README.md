@@ -63,17 +63,9 @@ Catalog of my things is a console app that will help you to keep a record of dif
 
 ### Key Features <a name="key-features"></a>
 
-- **[Ruby on rails so it works on DOM]**
-- **[Add GUI]**
-- **[Use postgre SQL to store data]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [coming soon ...]()
+- **[Adds a list of things you own by categories]**
+- **[Data is stored]**
+- **[Can retrieve a list of things you own]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,7 +103,7 @@ Install this project with:
 
 ### Usage
 
-- The project can be used as a tool to record what books are in the library and who borrows them.
+- The project can be used as a tool to add and list a catalog of things you own.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,9 +136,9 @@ Install this project with:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[query and update animals table]**
-- [ ] **[query multiple tables]**
-- [ ] **[add "join table" for visits]**
+- [ ] **[Ruby on rails so it works on DOM]**
+- [ ]  **[Add GUI]**
+- [ ]  **[Use postgre SQL to store data]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
