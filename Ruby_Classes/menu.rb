@@ -6,7 +6,7 @@ class Menu
   puts "Welcome to My Catalog of Things!\n\n"
 
   def menu
-    puts 'Please choose an option by selecting a number'
+    puts "Please choose an option by selecting a number\n"
 
     @list = {
       1 => 'List all books',
