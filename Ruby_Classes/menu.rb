@@ -40,7 +40,7 @@ class Menu
       when 4
         @app.list_all_genres
       when 5
-        # @app.list_all_labels
+        @app.list_all_labels
       when 6
         @app.list_all_authors
       when 7
