@@ -32,7 +32,7 @@ class Menu
     loop do
       case menu
       when 1
-        # @app.list_all_books
+        @app.list_all_books
       when 2
         @app.list_all_music_album
       when 3
