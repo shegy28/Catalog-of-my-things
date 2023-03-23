@@ -151,7 +151,7 @@ class App
   end
 
   def add_genre
-    print "Add Genre\n\n"
+    print "Add Music Genre eg 'Rap'\n\n"
     print 'Genre name: '
     genre_name = gets.chomp
     genre = Genre.new(genre_name)
