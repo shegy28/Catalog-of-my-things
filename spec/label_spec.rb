@@ -1,6 +1,5 @@
 require_relative 'spec_helper'
 
-
 describe Label do
   describe '#initialize' do
     it 'initializes a new Label instance with a unique id, title, color, and an empty items array' do

@@ -1,7 +1,6 @@
 require_relative '../Ruby_Classes/books'
 require 'json'
 
-
 module BooksData
   def load_books
     data = []
